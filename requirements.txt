@@ -2,6 +2,7 @@ bkcharts==0.2
 bokeh==0.12.7
 Django==1.11.4
 django-picklefield==1.0.0
+gunicorn==19.7.1
 Jinja2==2.9.6
 MarkupSafe==1.0
 numpy==1.13.1
