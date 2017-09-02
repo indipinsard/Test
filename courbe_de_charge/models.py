@@ -31,13 +31,12 @@ class UsersLP(models.Model) :
     This model contains the responses of the users to the form
     and their load profile resulting from the simulation.
     """
-    loc_choices = []
-    for obj in GeographicLP.objects.all() :
-        loc_choices.append((obj.region, obj.region))
+    loc_choices = [('Auvergne-Rhône-Alpes', 'Auvergne-Rhône-Alpes'), ('Bourgogne-Franche-Comté', 'Bourgogne-Franche-Comté'), ('Bretagne', 'Bretagne'),
+       ('Centre-Val de Loire', 'Centre-Val de Loire'), ('Corse', 'Corse'), ('Grand-Est', 'Grand-Est'), ('Hauts-de-France', 'Hauts-de-France'),
+       ('Ile-de-France', 'Ile-de-France'), ('Normandie', 'Normandie'), ('Nouvelle-Aquitaine', 'Nouvelle-Aquitaine'), ('Occitanie', 'Occitanie'),
+       ('Pays de la Loire', 'Pays de la Loire'), ('Provence-Alpes-Côte d\'Azur', 'Provence-Alpes-Côte d\'Azur')]
     
-    power_choices = []
-    for obj in ElectricityPrice.objects.all() :
-        power_choices.append((obj.em_power, obj.em_power))
+    power_choices = [(3, 3), (6, 6), (9, 9), (12, 12), (15, 15)]
     
     user = models.CharField(max_length=50, default='blabla')
     location = models.CharField(max_length=50, choices=loc_choices, default='Ile-de-France')
