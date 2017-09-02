@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <title>{% block title %}Simulation énergétique{% endblock %}</title>
+</head>
+<body>
+<header>Bienvenue sur notre site</header>
+    <nav>
+       {% block nav %}
+       <ul>
+            {% if user.is_authenticated %}
+            <li>Vous êtes connecté en tant que {{user.username}} !</li>
+            <li><a href="/accueil/deconnexion/">Déconnexion</a></li>
+            {% if user_result %}
+            <li><a href="/courbe_de_charge/resultats/">Simulation courbe de charge</a></li>
+            {% else %}
+            <li><a href="/courbe_de_charge/questionnaire/">Simulation courbe de charge</a></li>
+            {% endif %}
+            {% else %}
+            <li><a href="/accueil/inscription/">Inscription</a></li>
+            <li><a href="/accueil/connexion/">Connexion</a></li>
+            <li><a href="/courbe_de_charge/questionnaire/">Simulation courbe de charge</a></li>
+            {% endif %}
+       </ul>
+       {% endblock %}
+   </nav>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+</body>
+</html>
+
+

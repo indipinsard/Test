@@ -1,0 +1,7 @@
+<h1>Quelques Infos</h1>
+
+<form method="post" action=".">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Calculer ma courbe de charge" />
+</form>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment with Bokeh</title>
+    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+    {{ script|safe }}
+</head>
+<body>
+    <header>Voici votre courbe de charge, {{user}} ! Vous consommez {{conso}} kWh par an.</header><br/>
+    <div> 
+    {{ div|safe }}
+    </div>
+    <footer><br/><a href="/courbe_de_charge/questionnaire/">Modifier mes informations</a></footer>
+</body>
+</html>
