@@ -73,4 +73,4 @@ def Results(request) :
     plot.yaxis.axis_label = 'Puissance (kWh)'
     script, div = components(plot, CDN)
 
-    return render(request, 'courbe_de_charge/results.html', {'script': script, 'div': div, 'user': user, 'conso' : consumption})
+    return render(request, 'courbe_de_charge/results.html', {'script': script, 'div': div, 'user': user, 'conso' : consumption, 'data': data})
