@@ -24,7 +24,7 @@ class ElectricityPrice(models.Model) :
     kWh_price = models.FloatField()
 
     def __str__(self) :
-        return str(em_power)
+        return 'P = {0} kVA'.format(self.em_power)
 
 class UsersLP(models.Model) :
     """
