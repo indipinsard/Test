@@ -6,3 +6,4 @@ class LPForm(forms.ModelForm) :
     class Meta :
         model = UsersLP
         fields = ('location', 'power', 'bill',)
+        #Indiana n'en peut plus
